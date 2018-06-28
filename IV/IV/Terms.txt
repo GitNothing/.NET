@@ -1,0 +1,51 @@
+﻿OOP: A method in programming that encapsulate functions (aka methods) and data within their own "object". Each object are of their own instance meaning they can each have their own values, and their mode of operations are isolated from other objects. However, each type of object (aka class) can be reused by instantiating another independent instance. They can also inherit from parent classes and access the parent classes.
+
+Polymorphism: An object class can take on different type of class that they inherit by casting up or down. Also through inhertience that will change its implimentation.
+
+Abstract class vs normal class: Abstract class can have non-declared abstract data and methods. They cannot be instantiated.
+
+Interface: Use to create template of data and method for other class that inherits it. Cannot be instantiated. If a class implements the interface, the class must implement all data and method that is specified in the interface.
+
+Linked-list: An object that has a reference link to its parent or children. Can be just parent (single), with children (double), link root to tail (circlur).
+
+hash-table: A list with key and value pair. Key is use to quickly find its value. The key is pass into a hash function to find the value. A value can be any data-type. Keys are usually string or numbers.
+
+SOLID: Single responsibility, Open/Close, Liskov Substitution, Interface Segregation, Dependency Inversion
+
+Dependency Inversion: High level class, such as parent class, should not have specific functionlities. E.g. a parent class use for managing database queries should not handle functionalities of manipluating data from a specific data model which can be done in the data model class.
+
+Liskov Substitution: Child class should not replace methods from the parent class. Example, if clear() from the parent empty a list, and clear() from the child sets all list values to 0, then it is violating this principle. Fix? The base class should only have methods that would make sense for the child that herits it.
+
+Open/Close: You can modify a class by adding new things, but don't changing anything that was implemented.
+
+Interface Segregation: Interface should not include other interfaces. Create one interface for a specific role. A class should implement from many interfaces to achieve its functionality instead of implementing one interface that already includes other interface.
+
+Breathe First search tree: uses FILO queue to check every node, new search node are added while previous node that is being checked is removed from the queue.
+
+Depth First search: uses LIFO stack, new search are push into the stack, if the new search doesn't have a child, it gets pop out.
+
+Balanced tree: the left child node is always smaller than the right, while the parent node is the middle value of those two.
+
+AVL tree: a balanced binary search tree where the hight is equal. The left and right node distance can only differ at most by 1, where distance of each adjact node is 1. (https://www.youtube.com/watch?v=rwzuze_tTwQ)
+
+Tree transveral: 
+	Reorder - go left, if bottom, go up and find first right to go to, then (if found) the first right would find a left.
+
+Inversion of control: Passing different type of classes in an argument, and letting the method deal with it. Allows the classes to be decided and created from the outside. These different classes should inherit the same interface that is acceptable in the method parameter.
+
+Dependency Injection: is like inversion of control. It is pass in from the constructor.
+
+Facade Pattern: A class that handles many other different class inside of it.
+Iterator Pattern: holds a collection and has methods that goes through them like IEnumerator.
+Command Pattern: A list of instances that have different classes which implements the same interface. This list is loop through and executes the method that is contracted.
+Adapter Pattern vs wrapper: Adapter creates compatiblity between two interface by transforming the input. Wrapper encapsulates complex codes.
+Bridge Pattern: It is just an abstract class with abstract method and each class that extends this abstract class can implement the abstract method differently.
+Filter Pattern*: Has an ICriteria interface with a meets(list<T>):list<t>. A class that implements the ICriteria interface will implement a way to filter out the T and return it in a list form. 
+  The AndCriteria and OrCriteria also implements ICriteria, but takes in other ICriteria type classes in the constructor. They execute their meets and then filters out the OR or AND condition.
+Composite Pattern: Is basically like an List<T> it has add/remove and can hold an item T or a group List<T>
+Decorator Pattern*: Has an abstract decorator that implements the IItem interface. This concrete class decorator constructor accepts an Item, which also implements IItem, and calls all the method on the IItem interface, but calls it against the Item that was pass in from the constructor. These method in the decorator can change, but not in the item. https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
+Proxy Pattern*: Has an interface containing methods to expose. The proxy and original class will both implement it, but the client can only call the proxy. The proxy will instantiate the original, and call the interface method against the orginial.
+
+  
+
+//NEED TO IMPLEMENT EXAMPLE FOR CHAIN OF RESONSIBLITY

@@ -1,0 +1,32 @@
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\U1.dll
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\U1.pdb
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\IV.exe
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\IV.pdb
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\IV.exe.config
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\obj\Debug\U1.csprojResolveAssemblyReference.cache
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\obj\Debug\U1.csproj.CoreCompileInputs.cache
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\obj\Debug\U1.dll
+C:\Users\viluan\Desktop\ReposSync\NET\IV\U1\U1\obj\Debug\U1.pdb
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\U1.dll
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\U1.pdb
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\IV.exe
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\IV.pdb
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\IV.exe.config
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\obj\Debug\U1.csprojResolveAssemblyReference.cache
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\obj\Debug\U1.csproj.CoreCompileInputs.cache
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\obj\Debug\U1.dll
+C:\Users\Viluan Dang\Desktop\Repos\ReposSync\NET\IV\U1\U1\obj\Debug\U1.pdb
