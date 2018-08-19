@@ -1,5 +1,7 @@
 ﻿OOP: A method in programming that encapsulate functions (aka methods) and data within their own "object". Each object are of their own instance meaning they can each have their own values, and their mode of operations are isolated from other objects. However, each type of object (aka class) can be reused by instantiating another independent instance. They can also inherit from parent classes and access the parent classes.
 
+OOP Abstraction: Hides details that the user does not need to know in order to use it. Like a TV remote control functions vs. how a TV works.
+
 Polymorphism: An object class can take on different type of class that they inherit by casting up or down. Also through inhertience that will change its implimentation.
 
 Abstract class vs normal class: Abstract class can have non-declared abstract data and methods. They cannot be instantiated.

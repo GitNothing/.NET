@@ -5,11 +5,11 @@ namespace IV
     class DelegatesExamples
     {
         public delegate void testDel(string input); //cannot be static
-        public void attachMethod(string input) { Console.WriteLine(input); } //prints hello1
+        public void attachMethod(string input) { Console.WriteLine(input); } //method that prints hello1
 
         public DelegatesExamples()
         {
-            //normal delegate
+            //normal delegate, define as a member
             testDel del = attachMethod;
             del.Invoke("hello1");
 

@@ -41,7 +41,7 @@ namespace IV
             }
         }
 
-        //represents an undo state
+        //represents the data
         class Memento
         {
             private string _text; //state

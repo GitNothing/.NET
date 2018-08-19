@@ -14,6 +14,7 @@ namespace IV
 
             root.Execute();
         }
+        //A class that only purpose is to hand over execution to the next of its kind after execution
         class Handler
         {
             private readonly int _id;

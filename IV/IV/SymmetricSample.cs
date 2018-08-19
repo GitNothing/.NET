@@ -8,6 +8,7 @@ namespace IV
     {
         public SymmetricSample()
         {
+            //This uses block-chaining method
             //data to work with
             var data = new byte[] { 1, 2, 3, 4, 5, 6, 7, 2, 2, 3, 4, 5, 3, 2, 1, 2, 3 };
             SymmetricAlgorithm c = SymmetricAlgorithm.Create();

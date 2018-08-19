@@ -1,4 +1,7 @@
-﻿using System;
+﻿#define TEST1
+using System;
+using System.Diagnostics;
+using System.IO;
 
 namespace IV
 {
@@ -7,8 +10,8 @@ namespace IV
         
         static void Main(string[] args)
         {
-            var t = new test();
-            Console.ReadLine();
+            var b = new BreadthFS(true);
+            Console.ReadKey();
         }
         
     }

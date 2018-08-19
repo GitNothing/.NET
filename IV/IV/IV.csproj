@@ -67,13 +67,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsymmetricSample.cs" />
+    <Compile Include="BreadthFS.cs" />
     <Compile Include="bubbleSort.cs" />
     <Compile Include="chainOfCommandExample.cs" />
     <Compile Include="CodeDomExample.cs" />
     <Compile Include="DelegatesExamples.cs" />
+    <Compile Include="DepthFS.cs" />
     <Compile Include="ExtensionMethodExample.cs" />
     <Compile Include="generic.cs" />
     <Compile Include="HashingSample.cs" />
+    <Compile Include="IndexArraySample.cs" />
     <Compile Include="linkList.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="MementoExample.cs" />
@@ -83,6 +86,8 @@
     <Compile Include="quickSort.cs" />
     <Compile Include="SymmetricSample.cs" />
     <Compile Include="test.cs" />
+    <Compile Include="BinaryTree.cs" />
+    <Compile Include="Tree.cs" />
     <Compile Include="VisitorExample.cs" />
   </ItemGroup>
   <ItemGroup>
