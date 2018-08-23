@@ -66,28 +66,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlterArray.cs" />
     <Compile Include="AsymmetricSample.cs" />
+    <Compile Include="BinarySearchPos.cs" />
+    <Compile Include="BinaryTreeDisplay.cs" />
+    <Compile Include="BitRotation.cs" />
     <Compile Include="BreadthFS.cs" />
     <Compile Include="bubbleSort.cs" />
     <Compile Include="chainOfCommandExample.cs" />
     <Compile Include="CodeDomExample.cs" />
+    <Compile Include="ContigousCount.cs" />
     <Compile Include="DelegatesExamples.cs" />
     <Compile Include="DepthFS.cs" />
     <Compile Include="ExtensionMethodExample.cs" />
     <Compile Include="generic.cs" />
     <Compile Include="HashingSample.cs" />
+    <Compile Include="HeapSort.cs" />
     <Compile Include="IndexArraySample.cs" />
     <Compile Include="linkList.cs" />
     <Compile Include="LinqTest.cs" />
+    <Compile Include="LongestIncreasingSubsequence.cs" />
     <Compile Include="MementoExample.cs" />
     <Compile Include="mergeSort.cs" />
+    <Compile Include="MinSumOfCount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PythagoreanTriplet.cs" />
     <Compile Include="quickSort.cs" />
+    <Compile Include="StockBuySell.cs" />
     <Compile Include="SymmetricSample.cs" />
     <Compile Include="test.cs" />
     <Compile Include="BinaryTree.cs" />
-    <Compile Include="Tree.cs" />
+    <Compile Include="Network.cs" />
     <Compile Include="VisitorExample.cs" />
   </ItemGroup>
   <ItemGroup>

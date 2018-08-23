@@ -9,7 +9,15 @@ namespace IV
 {
     public class BinaryTree
     {
-        public BinaryNode root;
+        public readonly BinaryNode Root;
+        public int Count { get; private set; } = 1;
+        public List<BinaryNode> NodesTreeIndex { get; set; } = new List<BinaryNode>(); //order by level, left->right
+
+        public BinaryTree(BinaryNode root)
+        {
+            Root = root;
+            NodesTreeIndex.Add(root);
+        }
 
         //You must first run the repective method to generate these list
         public List<int> PreorderList { get; set; } = new List<int>();
@@ -17,23 +25,26 @@ namespace IV
         public List<int> InOrderList { get; set; } = new List<int>();
         public BinaryNode Insert(BinaryNode root, int num, bool isRight = false)
         {
+            Count++;
             var n = BinaryNode.Fac(num);
-            n.parent = root;
+            n.Parent = root;
             if (isRight)
             {
-                root.right = n;
+                root.Right = n;
                 return n;
             }
-            if (root.left == null)
+            if (root.Left == null)
             {
                 //Console.WriteLine(n.num);
-                root.left = n;
+                root.Left = n;
             }
             else
             {
                 //Console.WriteLine(n.num);
-                root.right = n;
+                root.Right = n;
             }
+
+            NodesTreeIndex.Add(n);
             return n;
         }
 
@@ -45,11 +56,11 @@ namespace IV
                 var t = times - 1;
                 if (isLeft)
                 {
-                    return Tran(parent.left, isLeft, t);
+                    return Tran(parent.Left, isLeft, t);
                 }
                 else
                 {
-                    return Tran(parent.right, isLeft, t);
+                    return Tran(parent.Right, isLeft, t);
                 }
             }
             return parent;
@@ -60,26 +71,26 @@ namespace IV
             if (current == null) return;
 
             //keep moving down left;
-            if (current.left != null)
+            if (current.Left != null)
             {
                 //left is already tracked
-                if (InOrderList.Contains(current.left.num))
+                if (InOrderList.Contains(current.Left.Num))
                 {
                     //move to parent if this node is already tracked
-                    if (InOrderList.Contains(current.num))
+                    if (InOrderList.Contains(current.Num))
                     {
-                        InOrder(current.parent);
+                        InOrder(current.Parent);
                         return;
                     }
 
                     //track current node and move right, since all left node is already tracked
 //                    Console.WriteLine($"Add current {current.num}");
-                    InOrderList.Add(current.num);
-                    InOrder(current.right);
+                    InOrderList.Add(current.Num);
+                    InOrder(current.Right);
                 }
                 else
                 {
-                    InOrder(current.left);
+                    InOrder(current.Left);
                 }
             }
 
@@ -87,25 +98,25 @@ namespace IV
             else
             {
                 //track current, because can't move down anymore
-                if (!InOrderList.Contains(current.num))
+                if (!InOrderList.Contains(current.Num))
                 {
 //                    Console.WriteLine($"Add left {current.num}");
-                    InOrderList.Add(current.num);
+                    InOrderList.Add(current.Num);
                 }
                 else
                 {
-                    InOrder(current.parent);
+                    InOrder(current.Parent);
                     return;
                 }
                 
                 //if there is a right and it is not track, move to it
-                if (current.right != null && !InOrderList.Contains(current.right.num))
+                if (current.Right != null && !InOrderList.Contains(current.Right.Num))
                 {
-                    InOrder(current.right);
+                    InOrder(current.Right);
                 }
                 else
                 {
-                    InOrder(current.parent);
+                    InOrder(current.Parent);
                 }
             }
         }
@@ -117,42 +128,42 @@ namespace IV
             //condition to go up on the right nodes
             if (isRightUp)
             {
-                if (current.parent != null) //condition not at root
+                if (current.Parent != null) //condition not at root
                 {
                     //indicates the end since you cannot come back here more than twice
-                    if (PostorderList.Contains(current.num))
+                    if (PostorderList.Contains(current.Num))
                     {
                         Postorder(null);
                         return;
                     }
 //                    Console.WriteLine($"insert from right {current.num}");
-                    PostorderList.Add(current.num);
-                    Postorder(current.parent, true);
+                    PostorderList.Add(current.Num);
+                    Postorder(current.Parent, true);
                 }
                 else //condition at root
                 {
-                    Postorder(current.right);
+                    Postorder(current.Right);
                 }
                 return;
             }
-            if (current.left != null)
+            if (current.Left != null)
             {
-                Postorder(current.left);
+                Postorder(current.Left);
             }
             else
             {
-                if (!PostorderList.Contains(current.num))
+                if (!PostorderList.Contains(current.Num))
                 {
 //                    Console.WriteLine($"insert left {current.num}");
-                    PostorderList.Add(current.num);
+                    PostorderList.Add(current.Num);
 
                     //go back up to parent and down the next right node
-                    Postorder(current.parent.right);
+                    Postorder(current.Parent.Right);
                 }
                 else
                 {
                     //go back up to all the right nodes
-                    Postorder(current.parent, true);
+                    Postorder(current.Parent, true);
                 }
             }
         }
@@ -162,28 +173,28 @@ namespace IV
             if (current == null) return;
 
             //add node immediately if doesn't exist
-            if (!PreorderList.Contains(current.num)) PreorderList.Add(current.num);
+            if (!PreorderList.Contains(current.Num)) PreorderList.Add(current.Num);
 
             //keep going down next left node and add to list if not exist
-            if (current.left != null && !PreorderList.Contains(current.left.num))
+            if (current.Left != null && !PreorderList.Contains(current.Left.Num))
             {
-                PreorderList.Add(current.left.num);
-                Preorder(current.left);
+                PreorderList.Add(current.Left.Num);
+                Preorder(current.Left);
             }
 
             //otherwise go down right side and add to list if not exist
             //the recursive call will still keep checking for left sides
             else
             {
-                if (current.right != null && !PreorderList.Contains(current.right.num))
+                if (current.Right != null && !PreorderList.Contains(current.Right.Num))
                 {
-                    PreorderList.Add(current.right.num);
-                    Preorder(current.right);
+                    PreorderList.Add(current.Right.Num);
+                    Preorder(current.Right);
                 }
                 else
                 {
                     //if already exist, then keep moving up
-                    Preorder(current.parent);
+                    Preorder(current.Parent);
                 }
             }
         }
@@ -194,12 +205,20 @@ namespace IV
             list.ForEach(e => x = x + e + ",");
             Console.WriteLine(x.Substring(0, x.Length-1));
         }
-        public static BinaryTree setSampleData()
+
+        public static void PrintNode(List<BinaryNode> list)
         {
-            var tree = new BinaryTree();
-            var l7_r = BinaryNode.Fac(7);
-            tree.root = l7_r;
-            var l1 = tree.Insert(l7_r, 1);
+            foreach (var i in list)
+            {
+                Console.Write(i.Num + " ");
+            }
+        }
+        public static BinaryTree SetSampleData()
+        {
+            var l7R = BinaryNode.Fac(7);
+            var tree = new BinaryTree(l7R);
+
+            var l1 = tree.Insert(l7R, 1);
             tree.Insert(l1, 0);
             var l3 = tree.Insert(l1, 3);
             tree.Insert(l3, 2);
@@ -207,20 +226,19 @@ namespace IV
             tree.Insert(l5, 4);
             tree.Insert(l5, 6);
 
-            var l9 = tree.Insert(l7_r, 9);
+            var l9 = tree.Insert(l7R, 9);
             tree.Insert(l9, 8);
             tree.Insert(l9, 10);
 
             return tree;
         }
-        public static BinaryTree setSampleData1()
+        public static BinaryTree SetSampleData1()
         {
-            var tree = new BinaryTree();
-            var l50_r = BinaryNode.Fac(7);
-            tree.root = l50_r;
+            var l50R = BinaryNode.Fac(7);
+            var tree = new BinaryTree(l50R);
 
-            var l25 = tree.Insert(l50_r, 25);
-            var l75 = tree.Insert(l50_r, 75);
+            var l25 = tree.Insert(l50R, 25);
+            var l75 = tree.Insert(l50R, 75);
 
             //left
             var l15 = tree.Insert(l25, 15);
@@ -241,41 +259,71 @@ namespace IV
             return tree;
         }
 
-        public static BinaryTree setSampleData2()
+        public static BinaryTree SetSampleData2()
         {
-            var tree = new BinaryTree();
             var l10 = BinaryNode.Fac(10);
-            tree.root = l10;
+            var tree = new BinaryTree(l10);
 
             //left
             var l12 = tree.Insert(l10, 12);
+            var l5 = tree.Insert(l10, 5);
+
             tree.Insert(l12, 3);
 
             var l4 = tree.Insert(l12, 4);
+
+            tree.Insert(l5, 11);
+            var l2 = tree.Insert(l5, 2);
+
             tree.Insert(l4, 6);
             tree.Insert(l4, 7);
 
             //right
-            var l5 = tree.Insert(l10, 5);
-            tree.Insert(l5, 11);
-            var l2 = tree.Insert(l5, 2);
             tree.Insert(l2, 8, true);
 
             //reference: http://cs-people.bu.edu/tvashwin/cs112_spring09/lab06.html
             //Inorder: 3.12.6.4.7.10.11.5.2.8
             return tree;
         }
+
+        public static BinaryTree SetSampleData3()
+        {
+            var l9 = BinaryNode.Fac(9);
+            var t = new BinaryTree(l9);
+
+            var l12 = t.Insert(l9, 12);
+            var l6 = t.Insert(l9, 6);
+
+
+            var l13 = t.Insert(l12, 13);
+            var l25 = t.Insert(l12, 25);
+
+            t.Insert(l6, 4);
+            t.Insert(l6, 15);
+
+            t.Insert(l13, 7);
+            t.Insert(l13, 1);
+
+            t.Insert(l25, 3);
+            t.Insert(l25, 19);
+
+            
+
+            return t;
+
+            //inorder: 7,13,1,12,3,25,19,9,4,6,15
+        }
     }
     public class BinaryNode
     {
-        public int num;
-        public BinaryNode parent;
-        public BinaryNode left;
-        public BinaryNode right;
+        public int Num;
+        public BinaryNode Parent;
+        public BinaryNode Left;
+        public BinaryNode Right;
         public static BinaryNode Fac(int num)
         {
             var n = new BinaryNode();
-            n.num = num;
+            n.Num = num;
             return n;
         }
     }

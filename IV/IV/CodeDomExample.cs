@@ -36,7 +36,7 @@ namespace IV
             var returnerGet = new CodeMethodReturnStatement(
                 new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "x"));
 
-            //create a statement "this.x = value;"
+            //create a statement "this.x = Value;"
             var assignerSet = new CodeAssignStatement(
                 new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "x"),
                 new CodePropertySetValueReferenceExpression());
@@ -99,7 +99,7 @@ namespace nameSpaceName {
                 return this.x;
             }
             set {
-                this.x = value;
+                this.x = Value;
             }
         }
 

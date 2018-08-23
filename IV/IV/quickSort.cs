@@ -34,8 +34,8 @@ namespace IV
             int pointer1 = start-1;
             int pointer2 = start;
 
-            //Set pivot and its value to compare
-            int pivot = end; //Use last value as the pivot
+            //Set pivot and its Value to compare
+            int pivot = end; //Use last Value as the pivot
             int comparer = original[pivot];
 
             Console.WriteLine("Pivot Value " + comparer);
@@ -48,12 +48,12 @@ namespace IV
             {
                 Console.WriteLine("pointer1 " + pointer1 + " pointer2 " + pointer2);
 
-                //Move pointer2 forward if its value is greater than the pivot.
+                //Move pointer2 forward if its Value is greater than the pivot.
                 if (original[pointer2] > comparer)
                 {
                     pointer2++;
                 }
-                //Otherwise, move pointer1++ and swap with pointer2 value, then advance pointer2++
+                //Otherwise, move pointer1++ and swap with pointer2 Value, then advance pointer2++
                 else
                 {
                     pointer1++;
@@ -65,17 +65,17 @@ namespace IV
                 }
             }
 
-            //Insert pivot value at pointer1+1 position
-            //Only insert if the value of the new pivot location is greater than the pivot value
+            //Insert pivot Value at pointer1+1 position
+            //Only insert if the Value of the new pivot location is greater than the pivot Value
             var newPivotLocation = pointer1 + 1;
             if(original[newPivotLocation] > original[pivot])
             {
                 Console.WriteLine("Insert at " + newPivotLocation);
 
-                //Insert pivot value at newPivotLocation position
+                //Insert pivot Value at newPivotLocation position
                 original.Insert(newPivotLocation, original[pivot]);
 
-                //remove the old pivot value which was pushed +1 at the end position
+                //remove the old pivot Value which was pushed +1 at the end position
                 original.RemoveAt(end + 1);
                 common.print(original);
             }
