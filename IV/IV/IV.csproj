@@ -69,6 +69,7 @@
     <Compile Include="AlterArray.cs" />
     <Compile Include="AsymmetricSample.cs" />
     <Compile Include="BinarySearchPos.cs" />
+    <Compile Include="BinarySearchPos2.cs" />
     <Compile Include="BinaryTreeDisplay.cs" />
     <Compile Include="BitRotation.cs" />
     <Compile Include="BreadthFS.cs" />
@@ -93,6 +94,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PythagoreanTriplet.cs" />
     <Compile Include="quickSort.cs" />
+    <Compile Include="QuickSort2.cs" />
+    <Compile Include="sort.cs" />
     <Compile Include="StockBuySell.cs" />
     <Compile Include="SymmetricSample.cs" />
     <Compile Include="test.cs" />

@@ -5,3 +5,5 @@ obj/
 Assets/
 packages/
 **/db.lock*
+
+#Use this if not working "git rm -r --cached ."

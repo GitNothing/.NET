@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace IV
 {
+    //NOT solved
     class ContigousCount
     {
         public ContigousCount(int[] sample)
